@@ -1,6 +1,13 @@
 public class Fecha{
 	private int dia, agno;
-	private String mes;
+	private String mes, fecha;
+	
+	public Fecha(String fecha){
+		this.fecha = fecha;
+		this.dia = Integer.parseInt(Strings.separarString(fecha, 1));
+		this.mes = Strings.separarString(fecha, 2);
+		this.agno = Integer.parseInt(Strings.separarString(fecha, 3));
+	}
 	
 	public void setDia(int dia){
 		this.dia = dia;
